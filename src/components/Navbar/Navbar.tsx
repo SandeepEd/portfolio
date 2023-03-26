@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const navBarItems = [
@@ -19,7 +18,7 @@ const navBarItems = [
 const NavItem = ({ name, path }: { name: string, path: string }) => {
     return (
         <Link
-            className='rounded-lg px-5 py-3 font-medium hover:bg-slate-100 hover:text-slate-900 float-right transition-colors duration-300 ease-in'
+            className='nav_item'
             to={`${path}`}>
             {name}
         </Link>
@@ -28,7 +27,9 @@ const NavItem = ({ name, path }: { name: string, path: string }) => {
 
 const Navbar = () => {
     return (
-        <nav className='bg-gray-800 py-2 text-white flex flex-row justify-center'>
+        <nav
+            className='nav_bar'
+        >
             {
                 navBarItems.map((item, i) => {
                     return (

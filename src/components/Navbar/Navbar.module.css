@@ -1,0 +1,12 @@
+/* Navbar.module.css */
+.navbar {
+    @apply bg-gray-800 py-2 text-white flex flex-row justify-center;
+}
+
+.navItem {
+    @apply rounded-lg px-5 py-3 font-medium float-right transition-colors duration-300 ease-in;
+}
+
+.navItem:hover {
+    @apply bg-slate-100 text-slate-900;
+}

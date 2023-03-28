@@ -40,7 +40,7 @@
 }
 
 body {
-  @apply bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-900 min-h-screen text-white;
+  @apply bg-background-image text-white font-primary;
 }
 
 /* :root {

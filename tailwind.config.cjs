@@ -10,7 +10,14 @@ module.exports = {
         blue: {
           950: '#17275c',
         },
-      }
+      },
+      backgroundImage: {
+        'background-image': "url('./public/assets/background-portfolio.png')",
+      },
+      fontFamily: {
+        'primary': ['Poppins', 'sans-serif'],
+        'secondary': ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],

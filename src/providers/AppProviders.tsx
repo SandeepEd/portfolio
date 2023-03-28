@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 type RouterProviderProps = {
     children: ReactNode
@@ -7,9 +8,11 @@ type RouterProviderProps = {
 
 const RoutesProvider: React.FC<RouterProviderProps> = ({ children }) =>
     <React.StrictMode>
-        <BrowserRouter>
-            {children}
-        </BrowserRouter>
+        <ErrorBoundary>
+            <BrowserRouter>
+                {children}
+            </BrowserRouter>
+        </ErrorBoundary>
     </React.StrictMode>
 
 export default RoutesProvider

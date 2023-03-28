@@ -1,6 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-8deg);
+  }
+}
+
+@layer components {
+
+  /* Navbar.module.css */
+  .nav_bar {
+    @apply py-2 text-white flex flex-row justify-center w-[100%];
+  }
+
+  .nav_item {
+    @apply rounded-xl px-5 py-3 font-medium float-right transition-all duration-[240ms] ease-linear;
+  }
+
+  .nav_item:hover {
+    @apply bg-slate-100 text-slate-900;
+  }
+
+  .animate-wave {
+    animation: wave 1s infinite;
+  }
+
+}
+
+body {
+  @apply bg-background-image text-white font-primary;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
